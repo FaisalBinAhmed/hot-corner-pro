@@ -37,10 +37,33 @@ export const Shortcuts = () => {
 
 	return (
 		<div className="w-full flex flex-col items-center">
-			<div className="w-full flex flex-col font-bold text-base items-start mb-4">
-				<p className="text-gray-300">HotCorner Pro</p>
-				<p className="text-gray-500 -mt-1">Quick Mouse Shortcuts</p>
+			<div className="w-full flex flex-row justify-between items-center mb-4">
+				<div className="font-bold flex flex-col text-base">
+					<div className="text-white">HotCorner Pro</div>
+					<div className="text-neutral-500 -mt-2">Quick Mouse Shortcuts</div>
+				</div>
+				<div className="flex flex-row gap-1">
+					{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+					<img
+						src="/icons/heart.svg"
+						alt="website"
+						title="Visit website"
+						className="w-6 h-6 cursor-pointer"
+						onClick={() => window.open("https://faisalbin.com", "_blank")}
+					/>
+					{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+					<img
+						src="/icons/coffee.svg"
+						alt="donate"
+						title="Donate"
+						className="w-6 h-6 cursor-pointer"
+						onClick={() =>
+							window.open("https://buymeacoffee.com/faisalbin", "_blank")
+						}
+					/>
+				</div>
 			</div>
+
 			<div className="w-full flex flex-col items-start mb-2">
 				<p className="text-sm text-gray-300">
 					Assign a double-click action to each corner of the page.

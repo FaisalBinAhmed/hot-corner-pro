@@ -1,8 +1,8 @@
 {
 	"manifest_version": 3,
-	"name": "Hot Corner Shortcuts",
-	"short_name": "HCS",
-	"description": "A Chrome Extension Boilerplate for Preact with Manifest Version 3",
+	"name": "HotCorner Pro",
+	"short_name": "HotCorner",
+	"description": "Trigger custom actions by double-clicking on page corners. Save time with predefined corner shortcuts.",
 	"version": "1.0",
 	"author": "Faisal Ahmed",
 	"icons": {
@@ -15,7 +15,7 @@
 		}
 	],
 	"action": {
-		"default_title": "Browser Action",
+		"default_title": "HotCorner Pro",
 		"default_popup": "src/action.html"
 	},
 	"permissions": ["storage"]
