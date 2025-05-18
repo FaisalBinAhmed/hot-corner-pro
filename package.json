@@ -1,5 +1,5 @@
 {
-	"name": "chrome-extension-preact-vite-manifest-3",
+	"name": "hot-corner-shortcuts",
 	"version": "1.0.0",
 	"description": "A chrome extension template with Preact",
 	"main": "index.ts",
@@ -9,21 +9,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/FaisalBinAhmed/Chrome-Extension-Preact-Vite-Manifest-3.git"
+		"url": "git+https://github.com/FaisalBinAhmed/hot-corner-shortcuts.git"
 	},
-	"keywords": [
-		"chrome",
-		"extension",
-		"manifest-3",
-		"vite",
-		"preact"
-	],
+	"keywords": ["chrome", "extension", "manifest-3", "vite", "preact"],
 	"author": "Faisal Ahmed",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/FaisalBinAhmed/Chrome-Extension-Preact-Vite-Manifest-3/issues"
+		"url": "https://github.com/FaisalBinAhmed/hot-corner-shortcuts/issues"
 	},
-	"homepage": "https://github.com/FaisalBinAhmed/Chrome-Extension-Preact-Vite-Manifest-3#readme",
+	"homepage": "https://github.com/FaisalBinAhmed/hot-corner-shortcuts#readme",
 	"dependencies": {
 		"preact": "^10.13.2"
 	},
