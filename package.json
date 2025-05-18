@@ -11,7 +11,13 @@
 		"type": "git",
 		"url": "git+https://github.com/FaisalBinAhmed/hot-corner-shortcuts.git"
 	},
-	"keywords": ["chrome", "extension", "manifest-3", "vite", "preact"],
+	"keywords": [
+		"chrome",
+		"extension",
+		"manifest-3",
+		"vite",
+		"preact"
+	],
 	"author": "Faisal Ahmed",
 	"license": "MIT",
 	"bugs": {
@@ -19,7 +25,9 @@
 	},
 	"homepage": "https://github.com/FaisalBinAhmed/hot-corner-shortcuts#readme",
 	"dependencies": {
-		"preact": "^10.26.6"
+		"@tailwindcss/vite": "^4.1.7",
+		"preact": "^10.26.6",
+		"tailwindcss": "^4.1.7"
 	},
 	"devDependencies": {
 		"@preact/preset-vite": "^2.10.1",
