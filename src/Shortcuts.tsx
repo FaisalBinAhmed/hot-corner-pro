@@ -113,7 +113,7 @@ export const Shortcuts = () => {
 
 					<div />
 					<div className="flex items-center justify-center text-xs text-gray-500">
-						Current Page
+						Webpage
 					</div>
 					<div />
 
