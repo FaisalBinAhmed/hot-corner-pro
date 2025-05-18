@@ -1,7 +1,8 @@
 import { render } from "preact";
+import { Shortcuts } from "./Shortcuts";
 
 const ActionPage = () => {
-	return <div className="text-2xl">ActionPage</div>;
+	return <Shortcuts />;
 };
 
 render(<ActionPage />, document.getElementById("action")!);
