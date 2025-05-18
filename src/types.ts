@@ -7,6 +7,7 @@ export type Action =
     | "back"
     | "duplicateTab"
     | "toggleBlur"
+    | "toggleGreyScale"
     | "forward";
 
 export type CornerActions = {

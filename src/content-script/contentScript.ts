@@ -22,6 +22,16 @@ const toggleBlur = () => {
     }
 };
 
+const toggleGreyScale = () => {
+    const current = document.body.style.filter;
+    if (current.includes("grayscale")) {
+        document.body.style.filter = "";
+    } else {
+        document.body.style.filter = "grayscale(100%)";
+
+    }
+};
+
 
 function performAction(action: Action) {
     switch (action) {
@@ -45,6 +55,9 @@ function performAction(action: Action) {
             break;
         case "toggleBlur":
             toggleBlur();
+            break;
+        case "toggleGreyScale":
+            toggleGreyScale();
             break;
         case "none":
             break;

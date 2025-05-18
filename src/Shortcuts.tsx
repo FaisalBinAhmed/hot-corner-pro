@@ -10,6 +10,7 @@ const availableActions: Action[] = [
 	"forward",
 	"duplicateTab",
 	"toggleBlur",
+	"toggleGreyScale",
 ];
 
 export const Shortcuts = () => {
