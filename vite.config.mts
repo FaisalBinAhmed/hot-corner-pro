@@ -8,8 +8,6 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: "./src/action.html",
-				options: "./src/options/options.html",
-				background: "./src/background/background.ts",
 				contentScript: "./src/content-script/contentScript.ts",
 			},
 			output: {
