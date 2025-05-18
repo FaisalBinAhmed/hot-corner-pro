@@ -36,11 +36,16 @@ export const Shortcuts = () => {
 	};
 
 	return (
-		<div className="w-full p-2 flex flex-col items-center">
-			<h1 className="text-lg font-bold mb-2">Hot Corner Shortcuts</h1>
-			<p className="text-sm text-gray-300 mb-4">
-				Assign an action to each screen corner:
-			</p>
+		<div className="w-full flex flex-col items-center">
+			<div className="w-full flex flex-col font-bold text-base items-start mb-4">
+				<p className="text-gray-300">HotCorner Pro</p>
+				<p className="text-gray-500 -mt-1">Quick Mouse Shortcuts</p>
+			</div>
+			<div className="w-full flex flex-col items-start mb-2">
+				<p className="text-sm text-gray-300">
+					Assign a double-click action to each corner of the page.
+				</p>
+			</div>
 
 			<div className="relative w-96 h-72 m-2">
 				<div
@@ -119,7 +124,7 @@ export const Shortcuts = () => {
 					))}
 				</select>
 			</div>
-			<p className="text-xs text-gray-500 mt-2">
+			<p className="text-sm text-gray-500 mt-2">
 				Note: You have to refresh existing pages for the changes to take effect.
 			</p>
 		</div>
