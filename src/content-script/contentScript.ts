@@ -2,8 +2,8 @@ import type { Action, Corner, CornerActions } from "../types";
 
 
 function getCornerFromCoordinates(x: number, y: number, width: number, height: number): Corner | null {
-    const zoneWidth = width * 0.2;
-    const zoneHeight = height * 0.2;
+    const zoneWidth = width * cornerZoneRatio;
+    const zoneHeight = height * cornerZoneRatio;
 
     if (x < zoneWidth && y < zoneHeight) return "topLeft";
     if (x > width - zoneWidth && y < zoneHeight) return "topRight";
@@ -74,16 +74,26 @@ let cornerActions: CornerActions = {
     bottomRight: "none",
 };
 
-chrome.storage.sync.get(["cornerActions"], (result) => {
+let cornerZoneRatio = 0.2; // default 20%
+
+chrome.storage.sync.get(["cornerActions", "cornerZoneSize"], (result) => {
     if (result.cornerActions) {
-        cornerActions = result.cornerActions as CornerActions;
+        cornerActions = result.cornerActions;
+    }
+    if (typeof result.cornerZoneSize === "number") {
+        cornerZoneRatio = result.cornerZoneSize / 100;
     }
 });
 
 // update local state when storage changes
 chrome.storage.onChanged.addListener((changes, areaName) => {
-    if (areaName === "sync" && changes.cornerActions?.newValue) {
-        cornerActions = changes.cornerActions.newValue as CornerActions;
+    if (areaName === "sync") {
+        if (changes.cornerActions?.newValue) {
+            cornerActions = changes.cornerActions.newValue;
+        }
+        if (changes.cornerZoneSize?.newValue) {
+            cornerZoneRatio = changes.cornerZoneSize.newValue / 100;
+        }
     }
 });
 
