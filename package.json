@@ -19,12 +19,12 @@
 	},
 	"homepage": "https://github.com/FaisalBinAhmed/hot-corner-shortcuts#readme",
 	"dependencies": {
-		"preact": "^10.13.2"
+		"preact": "^10.26.6"
 	},
 	"devDependencies": {
-		"@preact/preset-vite": "^2.5.0",
-		"@types/chrome": "^0.0.233",
-		"typescript": "^5.0.4",
-		"vite": "^4.2.2"
+		"@preact/preset-vite": "^2.10.1",
+		"@types/chrome": "^0.0.323",
+		"typescript": "^5.8.3",
+		"vite": "^5.0.11"
 	}
 }
