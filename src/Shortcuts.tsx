@@ -1,17 +1,6 @@
 import { useState, useEffect } from "preact/hooks";
-import type { Action, CornerActions } from "./types";
-
-const availableActions: Action[] = [
-	"none",
-	"scrollToTop",
-	"scrollToBottom",
-	"reload",
-	"back",
-	"forward",
-	"duplicateTab",
-	"toggleBlur",
-	"toggleGreyScale",
-];
+import type { CornerActions } from "./types";
+import { CornerSelect } from "./CornerSelect";
 
 export const Shortcuts = () => {
 	const [cornerActions, setCornerActions] = useState<CornerActions>({
@@ -36,75 +25,58 @@ export const Shortcuts = () => {
 	};
 
 	return (
-		<div className="w-full p-4 flex flex-col items-center justify-center">
-			<h1 className="text-lg font-bold mb-2">Hot Corners</h1>
+		<div className="w-full p-4 flex flex-col items-center">
+			<h1 className="text-lg font-bold mb-2">Hot Corner Shortcuts</h1>
 			<p className="text-sm text-gray-600 mb-4">
 				Assign an action to each screen corner:
 			</p>
 
-			<div className="grid grid-cols-3 grid-rows-3 w-72 h-72 m-2 border rounded-md bg-gray-100 text-center">
-				<div className="flex items-start justify-start p-2">
-					<select
-						className="p-1 text-sm border rounded"
-						value={cornerActions.topLeft}
-						onChange={(e) => updateCorner("topLeft", e.currentTarget.value)}
-					>
-						{availableActions.map((action) => (
-							<option key={action} value={action}>
-								{action}
-							</option>
-						))}
-					</select>
-				</div>
+			<div className="relative w-96 h-72 m-2">
+				<div className="absolute top-0 left-0 w-[20%] h-[20%] bg-green-500/30 rounded-tl-md pointer-events-none" />
+				<div className="absolute top-0 right-0 w-[20%] h-[20%] bg-green-500/30 rounded-tr-md pointer-events-none" />
+				<div className="absolute bottom-0 left-0 w-[20%] h-[20%] bg-green-500/30 rounded-bl-md pointer-events-none" />
+				<div className="absolute bottom-0 right-0 w-[20%] h-[20%] bg-green-500/30 rounded-br-md pointer-events-none" />
 
-				<div />
+				<div className="grid grid-cols-3 grid-rows-3 w-full h-full rounded-md bg-zinc-800 text-center">
+					<div className="flex items-start justify-start p-2">
+						<CornerSelect
+							value={cornerActions.topLeft}
+							onChange={(value) => updateCorner("topLeft", value)}
+						/>
+					</div>
 
-				<div className="flex items-start justify-end p-2">
-					<select
-						className="p-1 text-sm border rounded"
-						value={cornerActions.topRight}
-						onChange={(e) => updateCorner("topRight", e.currentTarget.value)}
-					>
-						{availableActions.map((action) => (
-							<option key={action} value={action}>
-								{action}
-							</option>
-						))}
-					</select>
-				</div>
-				<div />
+					<div />
 
-				<div className="flex items-center justify-center text-xs text-gray-500">
-					Your Page
-				</div>
-				<div />
+					<div className="flex items-start justify-end p-2">
+						<CornerSelect
+							value={cornerActions.topRight}
+							onChange={(value) => updateCorner("topRight", value)}
+						/>
+					</div>
 
-				<div className="flex items-end justify-start p-2">
-					<select
-						className="p-1 text-sm border rounded"
-						value={cornerActions.bottomLeft}
-						onChange={(e) => updateCorner("bottomLeft", e.currentTarget.value)}
-					>
-						{availableActions.map((action) => (
-							<option key={action} value={action}>
-								{action}
-							</option>
-						))}
-					</select>
-				</div>
-				<div />
-				<div className="flex items-end justify-end p-2">
-					<select
-						className="p-1 text-sm border rounded"
-						value={cornerActions.bottomRight}
-						onChange={(e) => updateCorner("bottomRight", e.currentTarget.value)}
-					>
-						{availableActions.map((action) => (
-							<option key={action} value={action}>
-								{action}
-							</option>
-						))}
-					</select>
+					<div />
+
+					<div className="flex items-center justify-center text-xs text-gray-500">
+						Current Page
+					</div>
+
+					<div />
+
+					<div className="flex items-end justify-start p-2">
+						<CornerSelect
+							value={cornerActions.bottomLeft}
+							onChange={(value) => updateCorner("bottomLeft", value)}
+						/>
+					</div>
+
+					<div />
+
+					<div className="flex items-end justify-end p-2">
+						<CornerSelect
+							value={cornerActions.bottomRight}
+							onChange={(value) => updateCorner("bottomRight", value)}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
