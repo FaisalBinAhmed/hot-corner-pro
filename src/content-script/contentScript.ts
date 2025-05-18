@@ -13,6 +13,16 @@ function getCornerFromCoordinates(x: number, y: number, width: number, height: n
     return null;
 }
 
+const toggleBlur = () => {
+    const current = document.body.style.filter;
+    if (current.includes("blur")) {
+        document.body.style.filter = "";
+    } else {
+        document.body.style.filter = "blur(8px)";
+    }
+};
+
+
 function performAction(action: Action) {
     switch (action) {
         case "scrollToTop":
@@ -29,6 +39,12 @@ function performAction(action: Action) {
             break;
         case "forward":
             history.forward();
+            break;
+        case "duplicateTab":
+            window.open(location.href, "_blank");
+            break;
+        case "toggleBlur":
+            toggleBlur();
             break;
         case "none":
             break;

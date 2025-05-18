@@ -8,6 +8,8 @@ const availableActions: Action[] = [
 	"reload",
 	"back",
 	"forward",
+	"duplicateTab",
+	"toggleBlur",
 ];
 
 export const Shortcuts = () => {

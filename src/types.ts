@@ -5,6 +5,8 @@ export type Action =
     | "scrollToBottom"
     | "reload"
     | "back"
+    | "duplicateTab"
+    | "toggleBlur"
     | "forward";
 
 export type CornerActions = {
