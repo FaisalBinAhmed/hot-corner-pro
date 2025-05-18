@@ -31,12 +31,12 @@ type CornerSelectProps = {
 
 export const CornerSelect = ({ value, onChange }: CornerSelectProps) => (
 	<select
-		className="p-1 text-sm border border-gray-700 rounded"
+		className="p-1 text-sm border border-gray-700 rounded bg-black text-white"
 		value={value}
 		onChange={(e) => onChange(e.currentTarget.value)}
 	>
 		{availableActions.map((action) => (
-			<option key={action} value={action}>
+			<option key={action} value={action} className="bg-black text-white">
 				{actionNameMap[action]}
 			</option>
 		))}
