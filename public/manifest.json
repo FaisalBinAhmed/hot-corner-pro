@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
-	"name": "HotCorner Pro",
-	"short_name": "HotCorner",
+	"name": "HotCorner Pro - Quick Mouse Shortcuts",
+	"short_name": "HotCorner Pro",
 	"description": "Trigger custom actions by double-clicking on page corners. Save time with predefined corner shortcuts.",
 	"version": "1.0",
 	"author": "Faisal Ahmed",
