@@ -140,14 +140,14 @@ export const Shortcuts = () => {
 					onChange={handleZoneSizeChange}
 					className="border border-gray-700 rounded text-sm px-2 py-1"
 				>
-					{[10, 15, 20, 25, 30, 35, 40].map((v) => (
+					{[5, 10, 15, 20, 25, 30, 35, 40, 45].map((v) => (
 						<option key={v} value={v}>
 							{v}%
 						</option>
 					))}
 				</select>
 			</div>
-			<p className="text-sm text-gray-500 mt-2">
+			<p className="text-sm text-neutral-500 mt-2">
 				Note: You have to refresh existing pages for the changes to take effect.
 			</p>
 		</div>
